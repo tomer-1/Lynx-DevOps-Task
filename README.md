@@ -51,8 +51,6 @@ helm upgrade --install postgresql bitnami/postgresql -n postgresql --version 12.
 minikube image load task-server:0.1
 ```
 
-### update local values.yaml with the currently generated DB_URI
-
 ### Deploy the application using the provided chart.
 ```bash
 kubectl create namespace task-server
