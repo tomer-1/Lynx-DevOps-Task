@@ -5,21 +5,14 @@
 replicaCount: 1
 
 image:
-  repository: localhost/task-server
+  repository: task-server
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "0.1"
 
 env:
   - name: DB_URI
-    # value: "postgresql"
-    # value : postgres://postgres:secret@localhost:5432/my_database
-    value : postgresql://postgres:zLS8pTef13@postgresql.postgresql
-# - name: DB_URI
-#   valueFrom:
-#     fieldRef:
-#       apiVersion: v1
-#       fieldPath: spec.service.clusterIP
+    value : postgresql://postgres:VerySecretPass123@postgresql.postgresql
 
 
 imagePullSecrets: []
